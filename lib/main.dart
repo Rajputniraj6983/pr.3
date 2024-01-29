@@ -41,3 +41,85 @@ class MyApp extends StatelessWidget {
   }
 }
 
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SafeArea(
+          child: Scaffold(
+            backgroundColor: Color(0xff000000),
+            appBar: AppBar(
+              centerTitle: true,
+              title: Text("Dark Shadow Button",style: TextStyle(color: Colors.white),),
+              backgroundColor: Color(0xffEC4C4C),
+            ),
+            body: Center(
+              child: Container(
+                height: 30,
+                width: 130,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(color: Color(0xff000000),
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  boxShadow: [BoxShadow(color: Color(0xff8F2D2D),blurRadius: 10,blurStyle: BlurStyle.normal,)],
+                ),
+                child: Text("Tap",style: TextStyle(color: Colors.white,fontSize: 15),
+                ),
+              ),
+            ),
+          ),
+        )
+    );
+  }
+}
+
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SafeArea(
+          child: Scaffold(
+            backgroundColor: Colors.white,
+            appBar: AppBar(
+              centerTitle: true,
+              title: Text("A Shadow Button ",style: TextStyle(color: Colors.white),),
+              backgroundColor: Color(0xff009688),
+            ),
+            body: Center(
+              child: Container(
+                height: 50,
+                width: 190,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  boxShadow: [BoxShadow(color: Colors.teal,blurRadius: 15,spreadRadius: 5.5,blurStyle: BlurStyle.outer,)],
+                ),
+                child: Text("Tap",style: TextStyle(color: Colors.black,fontSize: 25),
+                ),
+              ),
+            ),
+          ),
+        )
+    );
+  }
+}
